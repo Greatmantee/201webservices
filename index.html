@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>201 Web Services — Beautiful Websites. Profitable Businesses.</title>
+<meta name="description" content="We handcraft high-converting custom websites for brands, NGOs, startups and enterprises. Designed for growth. Engineered for trust. Lagos → Global.">
+<meta name="theme-color" content="#0B1520">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="201 Web Services — Beautiful Websites. Profitable Businesses.">
+<meta property="og:description" content="Handcrafting exceptional, conversion-focused websites from first principles.">
+<meta property="og:image" content="https://201webservices.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://201webservices.com/">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Flags JS support before paint so reveal animations never hide content
+     from users whose script fails to load. -->
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Icon sprite: defined once, referenced with <use> throughout -->
+<svg class="sprite" width="0" height="0" aria-hidden="true">
+  <defs>
+    <g id="i-check"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="i-check-circle"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 12.3l2.6 2.6L16 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="i-arrow-right"><path d="M5 12h14m-6-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="i-chevron-down"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="i-star"><path d="m12 2.6 2.9 5.9 6.5.95-4.7 4.6 1.1 6.45L12 17.45 6.2 20.5l1.1-6.45-4.7-4.6 6.5-.95z" fill="currentColor"/></g>
+    <g id="i-close"><path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></g>
+    <g id="i-menu"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></g>
+    <g id="i-mail"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></g>
+    <g id="i-phone"><path d="M21 16.9v2.6a1.8 1.8 0 0 1-2 1.8 17.6 17.6 0 0 1-7.7-2.7 17.4 17.4 0 0 1-5.3-5.3A17.6 17.6 0 0 1 3.3 5.5a1.8 1.8 0 0 1 1.8-2h2.6a1.8 1.8 0 0 1 1.8 1.6c.1 1 .3 1.9.6 2.8a1.8 1.8 0 0 1-.4 1.9l-1.1 1.1a14.4 14.4 0 0 0 5.3 5.3l1.1-1.1a1.8 1.8 0 0 1 1.9-.4c.9.3 1.8.5 2.8.6a1.8 1.8 0 0 1 1.6 1.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></g>
+    <g id="i-pin"><path d="M20 10.5c0 5.5-8 12-8 12s-8-6.5-8-12a8 8 0 0 1 16 0z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10.3" r="2.8" fill="none" stroke="currentColor" stroke-width="1.8"/></g>
+    <g id="i-target"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="4.8" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="1" fill="currentColor"/></g>
+    <g id="i-zap"><path d="M13 2 4.5 13.5H11l-.6 8.5L19 10.5h-6.5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></g>
+    <g id="i-handshake"><path d="m11 17 2 2a1.8 1.8 0 0 0 2.6 0l4.4-4.4a1.8 1.8 0 0 0 0-2.6L15.5 7.5H10L7 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 12.5 7 9m-3.5 3.5L7 16m4-9L8.5 4.5H4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="i-google"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></g>
+  </defs>
+</svg>
+
+<!-- ============================================================ Header -->
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="brand brand--chip" href="#top" aria-label="201 Web Services — home">
+      <img class="brand__logo" src="assets/logo-mark.png" alt=""
+           width="123" height="38" decoding="async">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#top">Home</a>
+      <a href="#services">Services</a>
+      <a href="projects.html">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn--primary" data-quote>Get a quote</button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <a href="#top">Home</a>
+  <a href="#services">Services</a>
+  <a href="projects.html">Portfolio</a>
+  <a href="#about">About</a>
+  <a href="contact.html">Contact</a>
+  <button class="btn btn--primary btn--block" data-quote>Get a quote</button>
+</div>
+
+<main id="main">
+
+<!-- ============================================================== Hero -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div>
+      <h1 data-reveal>
+        Websites people remember.<br>
+        <span class="u">Businesses people trust.</span>
+      </h1>
+
+      <p class="lede" data-reveal>
+        We design and develop custom digital experiences that build credibility,
+        strengthen your brand, and turn visitors into customers.
+      </p>
+
+      <div class="btn-row" data-reveal>
+        <button class="btn btn--primary btn--lg" data-quote>
+          Get a quote
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+        <a class="btn btn--ghost btn--lg" href="#portfolio">View our work</a>
+      </div>
+
+      <p class="hero-proof" data-reveal>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>
+        Helping businesses turn visitors into customers.
+      </p>
+    </div>
+
+    <!-- Signature brand element: the Creation Manifest.
+         The 201 numeral is treated as a logo — everything else is set as a
+         manifest around it: response, project, pipeline, provenance. -->
+    <aside class="manifest" data-reveal aria-label="201 Created — a project in the studio">
+
+      <div class="manifest__top">
+        <span class="manifest__label">HTTP response</span>
+        <span class="manifest__live">
+          <span class="manifest__pulse" aria-hidden="true"></span>
+          Live
+        </span>
+      </div>
+
+      <p class="manifest__code">
+        <span class="manifest__num">201</span>
+        <span class="manifest__created">Created</span>
+      </p>
+
+      <dl class="manifest__rows">
+        <div>
+          <dt>Project</dt>
+          <dd>Eniebi Foundation Website</dd>
+        </div>
+        <div>
+          <dt>Build</dt>
+          <dd>201-EF-04</dd>
+        </div>
+      </dl>
+
+      <div class="pipeline">
+        <span class="manifest__label">Creation pipeline</span>
+        <ol class="pipeline__list">
+          <li class="pipe pipe--done"><span class="pipe__mark" aria-hidden="true"></span><span class="pipe__name">Discovery</span><span class="pipe__state">Complete</span></li>
+          <li class="pipe pipe--done"><span class="pipe__mark" aria-hidden="true"></span><span class="pipe__name">Strategy</span><span class="pipe__state">Complete</span></li>
+          <li class="pipe pipe--done"><span class="pipe__mark" aria-hidden="true"></span><span class="pipe__name">Design</span><span class="pipe__state">Complete</span></li>
+          <li class="pipe pipe--active" aria-current="step"><span class="pipe__mark" aria-hidden="true"></span><span class="pipe__name">Development</span><span class="pipe__state">Running</span></li>
+          <li class="pipe"><span class="pipe__mark" aria-hidden="true"></span><span class="pipe__name">Launch</span><span class="pipe__state">Pending</span></li>
+        </ol>
+      </div>
+
+      <footer class="manifest__foot">
+        <p class="manifest__principle">Built from first principles.</p>
+        <p class="manifest__never">Never templates.</p>
+      </footer>
+    </aside>
+  </div>
+</section>
+
+<!-- ========================================================= Trusted by -->
+<section class="trusted">
+  <div class="wrap">
+    <p class="trusted__head" data-reveal>Trusted by brands creating lasting impact.</p>
+  </div>
+
+  <!-- Two identical tracks inside one moving rail. The rail travels exactly
+       one track width, so the loop point is invisible. -->
+  <div class="marquee">
+    <div class="marquee__rail">
+      <ul class="marquee__track">
+        <li class="logo logo--eniebi"><img src="assets/logos/eniebi-foundation.webp" alt="Eniebi Foundation" width="129" height="120" decoding="async"></li>
+        <li class="logo logo--smartbillspay"><img src="assets/logos/smartbillspay.webp" alt="SmartbillsPay" width="455" height="120" decoding="async"></li>
+        <li class="logo logo--nineteen73"><img src="assets/logos/nineteen73.webp" alt="Nineteen73" width="187" height="120" decoding="async"></li>
+        <li class="logo logo--letsgodrive"><img src="assets/logos/lets-go-drive.webp" alt="Let's Go Drive" width="479" height="120" decoding="async"></li>
+        <li class="logo logo--drn"><img src="assets/logos/dailyreport-ng.webp" alt="DailyReport.NG" width="187" height="120" decoding="async"></li>
+        <li class="logo logo--nacss"><img src="assets/logos/nacss.webp" alt="National Association of Cybersecurity Students" width="120" height="120" decoding="async"></li>
+        <li class="logo logo--fitpoint"><img src="assets/logos/fit-point.webp" alt="Fit Point" width="794" height="120" decoding="async"></li>
+        <li class="logo logo--secura"><img src="assets/logos/secura-forge.webp" alt="SecuraForge" width="162" height="120" decoding="async"></li>
+        <li class="logo logo--teemo"><img src="assets/logos/teemo-varieties.webp" alt="Teemo Varieties" width="149" height="120" decoding="async"></li>
+        <li class="logo logo--nomxy"><img src="assets/logos/nomxy-bites.webp" alt="Nomxy Bites" width="521" height="120" decoding="async"></li>
+        <li class="logo logo--sdu"><img src="assets/logos/southern-delta-university.webp" alt="Southern Delta University" width="106" height="120" decoding="async"></li>
+        <li class="logo logo--raida"><img src="assets/logos/raida.webp" alt="Raida" width="92" height="120" decoding="async"></li>
+        <li class="logo logo--ogulagha"><img src="assets/logos/ogulagha-news.webp" alt="Ogulagha News" width="120" height="120" decoding="async"></li>
+      </ul>
+      <ul class="marquee__track" aria-hidden="true">
+        <li class="logo logo--eniebi"><img src="assets/logos/eniebi-foundation.webp" alt="" width="129" height="120" decoding="async"></li>
+        <li class="logo logo--smartbillspay"><img src="assets/logos/smartbillspay.webp" alt="" width="455" height="120" decoding="async"></li>
+        <li class="logo logo--nineteen73"><img src="assets/logos/nineteen73.webp" alt="" width="187" height="120" decoding="async"></li>
+        <li class="logo logo--letsgodrive"><img src="assets/logos/lets-go-drive.webp" alt="" width="479" height="120" decoding="async"></li>
+        <li class="logo logo--drn"><img src="assets/logos/dailyreport-ng.webp" alt="" width="187" height="120" decoding="async"></li>
+        <li class="logo logo--nacss"><img src="assets/logos/nacss.webp" alt="" width="120" height="120" decoding="async"></li>
+        <li class="logo logo--fitpoint"><img src="assets/logos/fit-point.webp" alt="" width="794" height="120" decoding="async"></li>
+        <li class="logo logo--secura"><img src="assets/logos/secura-forge.webp" alt="" width="162" height="120" decoding="async"></li>
+        <li class="logo logo--teemo"><img src="assets/logos/teemo-varieties.webp" alt="" width="149" height="120" decoding="async"></li>
+        <li class="logo logo--nomxy"><img src="assets/logos/nomxy-bites.webp" alt="" width="521" height="120" decoding="async"></li>
+        <li class="logo logo--sdu"><img src="assets/logos/southern-delta-university.webp" alt="" width="106" height="120" decoding="async"></li>
+        <li class="logo logo--raida"><img src="assets/logos/raida.webp" alt="" width="92" height="120" decoding="async"></li>
+        <li class="logo logo--ogulagha"><img src="assets/logos/ogulagha-news.webp" alt="" width="120" height="120" decoding="async"></li>
+      </ul>
+      <ul class="marquee__track" aria-hidden="true">
+        <li class="logo logo--eniebi"><img src="assets/logos/eniebi-foundation.webp" alt="" width="129" height="120" decoding="async"></li>
+        <li class="logo logo--smartbillspay"><img src="assets/logos/smartbillspay.webp" alt="" width="455" height="120" decoding="async"></li>
+        <li class="logo logo--nineteen73"><img src="assets/logos/nineteen73.webp" alt="" width="187" height="120" decoding="async"></li>
+        <li class="logo logo--letsgodrive"><img src="assets/logos/lets-go-drive.webp" alt="" width="479" height="120" decoding="async"></li>
+        <li class="logo logo--drn"><img src="assets/logos/dailyreport-ng.webp" alt="" width="187" height="120" decoding="async"></li>
+        <li class="logo logo--nacss"><img src="assets/logos/nacss.webp" alt="" width="120" height="120" decoding="async"></li>
+        <li class="logo logo--fitpoint"><img src="assets/logos/fit-point.webp" alt="" width="794" height="120" decoding="async"></li>
+        <li class="logo logo--secura"><img src="assets/logos/secura-forge.webp" alt="" width="162" height="120" decoding="async"></li>
+        <li class="logo logo--teemo"><img src="assets/logos/teemo-varieties.webp" alt="" width="149" height="120" decoding="async"></li>
+        <li class="logo logo--nomxy"><img src="assets/logos/nomxy-bites.webp" alt="" width="521" height="120" decoding="async"></li>
+        <li class="logo logo--sdu"><img src="assets/logos/southern-delta-university.webp" alt="" width="106" height="120" decoding="async"></li>
+        <li class="logo logo--raida"><img src="assets/logos/raida.webp" alt="" width="92" height="120" decoding="async"></li>
+        <li class="logo logo--ogulagha"><img src="assets/logos/ogulagha-news.webp" alt="" width="120" height="120" decoding="async"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== Portfolio -->
+<section class="section" id="portfolio">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <span class="label">Portfolio</span>
+      <h2>Selected work.</h2>
+      <p class="lede">
+        A collection of digital experiences crafted for ambitious brands across
+        different industries.
+      </p>
+    </div>
+
+    <div class="work-grid">
+        <button class="work-card" type="button"
+                aria-haspopup="dialog"
+                data-preview
+                data-slug="eniebi-foundation"
+                data-name="Eniebi Foundation"
+                data-industry="NGO Website"
+                data-desc="A modern digital platform helping communities create lasting impact."
+                data-domain="eniebifoundation.org"
+                data-url="https://eniebifoundation.org"
+                data-tech="Custom Build • Tailwind CSS • Netlify"
+                data-full="assets/work/eniebi-foundation.webp">
+          <span class="work-card__shot">
+            <img src="assets/work/eniebi-foundation-card.webp" alt="Eniebi Foundation homepage" width="900" height="562" loading="lazy" decoding="async">
+          </span>
+          <span class="work-card__body">
+            <span class="work-card__industry">NGO Website</span>
+            <span class="work-card__name">Eniebi Foundation</span>
+            <span class="work-card__desc">A modern digital platform helping communities create lasting impact.</span>
+            <span class="work-card__cta">
+              Preview project
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </span>
+          </span>
+        </button>
+
+        <button class="work-card" type="button"
+                aria-haspopup="dialog"
+                data-preview
+                data-slug="nineteen73"
+                data-name="Nineteen73 Brandworks"
+                data-industry="Brand &amp; Advertising"
+                data-desc="A bold identity studio showcasing brand systems and outdoor media."
+                data-domain="nineteen73brandworks.ng"
+                data-url="https://nineteen73brandworks.ng"
+                data-tech="Custom Build • Tailwind CSS • Netlify"
+                data-full="assets/work/nineteen73.webp">
+          <span class="work-card__shot">
+            <img src="assets/work/nineteen73-card.webp" alt="Nineteen73 Brandworks homepage" width="900" height="562" loading="lazy" decoding="async">
+          </span>
+          <span class="work-card__body">
+            <span class="work-card__industry">Brand &amp; Advertising</span>
+            <span class="work-card__name">Nineteen73 Brandworks</span>
+            <span class="work-card__desc">A bold identity studio showcasing brand systems and outdoor media.</span>
+            <span class="work-card__cta">
+              Preview project
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </span>
+          </span>
+        </button>
+
+        <button class="work-card" type="button"
+                aria-haspopup="dialog"
+                data-preview
+                data-slug="fit-point"
+                data-name="Fit Point"
+                data-industry="E-commerce"
+                data-desc="A premium fashion store built around flexible payments and fast checkout."
+                data-domain="fitpoint.ng"
+                data-url="https://fitpoint.ng"
+                data-tech="Custom Storefront • WhatsApp Ordering • Netlify"
+                data-full="assets/work/fit-point.webp">
+          <span class="work-card__shot">
+            <img src="assets/work/fit-point-card.webp" alt="Fit Point homepage" width="900" height="562" loading="lazy" decoding="async">
+          </span>
+          <span class="work-card__body">
+            <span class="work-card__industry">E-commerce</span>
+            <span class="work-card__name">Fit Point</span>
+            <span class="work-card__desc">A premium fashion store built around flexible payments and fast checkout.</span>
+            <span class="work-card__cta">
+              Preview project
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </span>
+          </span>
+        </button>
+
+        <button class="work-card" type="button"
+                aria-haspopup="dialog"
+                data-preview
+                data-slug="dailyreport-ng"
+                data-name="DailyReport NG"
+                data-industry="News &amp; Publishing"
+                data-desc="A high-volume newsroom engineered for daily national coverage."
+                data-domain="dailyreport.ng"
+                data-url="https://dailyreport.ng"
+                data-tech="WordPress • Custom Theme • Performance SEO"
+                data-full="assets/work/dailyreport-ng.webp">
+          <span class="work-card__shot">
+            <img src="assets/work/dailyreport-ng-card.webp" alt="DailyReport NG homepage" width="900" height="562" loading="lazy" decoding="async">
+          </span>
+          <span class="work-card__body">
+            <span class="work-card__industry">News &amp; Publishing</span>
+            <span class="work-card__name">DailyReport NG</span>
+            <span class="work-card__desc">A high-volume newsroom engineered for daily national coverage.</span>
+            <span class="work-card__cta">
+              Preview project
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </span>
+          </span>
+        </button>
+
+        <button class="work-card" type="button"
+                aria-haspopup="dialog"
+                data-preview
+                data-slug="ogulagha-news"
+                data-name="Ogulagha News"
+                data-industry="News &amp; Publishing"
+                data-desc="An editorial-first platform for community and regional reporting."
+                data-domain="ogulaghanews.com"
+                data-url="https://ogulaghanews.com"
+                data-tech="WordPress • Custom Theme • Performance SEO"
+                data-full="assets/work/ogulagha-news.webp">
+          <span class="work-card__shot">
+            <img src="assets/work/ogulagha-news-card.webp" alt="Ogulagha News homepage" width="900" height="562" loading="lazy" decoding="async">
+          </span>
+          <span class="work-card__body">
+            <span class="work-card__industry">News &amp; Publishing</span>
+            <span class="work-card__name">Ogulagha News</span>
+            <span class="work-card__desc">An editorial-first platform for community and regional reporting.</span>
+            <span class="work-card__cta">
+              Preview project
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </span>
+          </span>
+        </button>
+
+        <button class="work-card" type="button"
+                aria-haspopup="dialog"
+                data-preview
+                data-slug="congress-news"
+                data-name="Congress News"
+                data-industry="News &amp; Publishing"
+                data-desc="A national newspaper with dense, category-driven story architecture."
+                data-domain="congressng.com"
+                data-url="https://www.congressng.com"
+                data-tech="WordPress • Custom Theme • Performance SEO"
+                data-full="assets/work/congress-news.webp">
+          <span class="work-card__shot">
+            <img src="assets/work/congress-news-card.webp" alt="Congress News homepage" width="900" height="562" loading="lazy" decoding="async">
+          </span>
+          <span class="work-card__body">
+            <span class="work-card__industry">News &amp; Publishing</span>
+            <span class="work-card__name">Congress News</span>
+            <span class="work-card__desc">A national newspaper with dense, category-driven story architecture.</span>
+            <span class="work-card__cta">
+              Preview project
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </span>
+          </span>
+        </button>
+    </div>
+
+    <div class="work-more" data-reveal>
+      <a class="btn btn--ghost btn--lg" href="projects.html">
+        View all projects
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ Reviews -->
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="head head--center" data-reveal>
+      <span class="label">Client reviews</span>
+      <h2>Why clients recommend us.</h2>
+      <p class="lede">
+        We let our clients speak for themselves — original, unedited Google
+        reviews from the brands we've partnered with.
+      </p>
+    </div>
+
+    <div class="reviews-slider" data-reveal>
+      <div class="reviews-track">
+
+        <article class="card review is-active">
+          <div class="review__head">
+            <span class="avatar" aria-hidden="true">E</span>
+            <span class="review__who">
+              <b>Eniebi Oweizidei</b>
+              <span>Founder &amp; Board Director, Eniebi Foundation</span>
+            </span>
+          </div>
+          <div class="review__meta">
+            <div class="review__stars" role="img" aria-label="Rated 5 out of 5 stars">
+              <svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+            </div>
+            <time class="review__date" datetime="2026-07-15">July 2026</time>
+          </div>
+          <div class="review__body">
+            <p>
+              We had an outstanding experience working with 201 Web Services.
+              From the very beginning, their team took the time to understand
+              the Eniebi Foundation&rsquo;s mission, vision, and objectives, ensuring
+              that every aspect of the website reflected our organization&rsquo;s
+              values and identity.
+            </p>
+            <div class="review__rest" id="review-rest-1">
+              <div class="review__rest-inner">
+                <p>
+                  Their professionalism, creativity, attention to detail, and
+                  commitment to excellence were evident throughout the entire
+                  process. They delivered a modern, visually appealing, and
+                  user-friendly website that exceeded our expectations in both
+                  design and functionality.
+                </p>
+                <p>
+                  We are extremely pleased with the final result and sincerely
+                  appreciate their dedication to delivering a high-quality
+                  website. We confidently recommend 201 Web Services to any
+                  individual or organization seeking exceptional website design
+                  and development services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="review__more" type="button" aria-expanded="false" aria-controls="review-rest-1">Read more</button>
+          <div class="review__foot">
+            <span class="review__verified">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-google"/></svg>
+              Verified Google Review
+            </span>
+          </div>
+        </article>
+
+        <article class="card review">
+          <div class="review__head">
+            <span class="avatar" aria-hidden="true">O</span>
+            <span class="review__who">
+              <b>Osolobrugwerukeme Ejakpovi</b>
+              <span>Founder, Fit Point</span>
+            </span>
+          </div>
+          <div class="review__meta">
+            <div class="review__stars" role="img" aria-label="Rated 5 out of 5 stars">
+              <svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+            </div>
+            <time class="review__date" datetime="2026-07-15">July 2026</time>
+          </div>
+          <div class="review__body">
+            <p>
+              I&rsquo;m absolutely blown away, the team took my brand idea for
+              Fitpoint and turned it into a beautiful, responsive website that
+              truly represents the dream i had, they were creative, reliable,
+              professional and mindful with every detail. From start to finish
+              the support was top-notch and delivery was on time, my customers
+              love the new site and it made building my brand so easy.
+            </p>
+            <div class="review__rest" id="review-rest-2">
+              <div class="review__rest-inner">
+                <p>
+                  I highly recommend this web service 100%, if you want to
+                  build something great, 201 Web Services is the best place to
+                  be.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="review__more" type="button" aria-expanded="false" aria-controls="review-rest-2">Read more</button>
+          <div class="review__foot">
+            <span class="review__verified">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-google"/></svg>
+              Verified Google Review
+            </span>
+          </div>
+        </article>
+
+        <article class="card review">
+          <div class="review__head">
+            <span class="avatar" aria-hidden="true">J</span>
+            <span class="review__who">
+              <b>Joshua Femi</b>
+              <span>Verified client</span>
+            </span>
+          </div>
+          <div class="review__meta">
+            <div class="review__stars" role="img" aria-label="Rated 5 out of 5 stars">
+              <svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+            </div>
+            <time class="review__date" datetime="2026-07-16">July 2026</time>
+          </div>
+          <div class="review__body">
+            <p>
+              Professional, creative, and reliable. 201 Web Services delivered
+              a stunning website that perfectly captures our brand identity. We
+              couldn&rsquo;t be happier with the outcome.
+            </p>
+          </div>
+          <div class="review__foot">
+            <span class="review__verified">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-google"/></svg>
+              Verified Google Review
+            </span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="reviews-nav">
+        <button class="reviews-arrow" type="button" data-review-prev aria-label="Previous review">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+        <div class="reviews-dots">
+          <button class="reviews-dot is-active" type="button" aria-label="Show review by Eniebi Oweizidei" aria-current="true"></button>
+          <button class="reviews-dot" type="button" aria-label="Show review by Osolobrugwerukeme Ejakpovi"></button>
+          <button class="reviews-dot" type="button" aria-label="Show review by Joshua Femi"></button>
+        </div>
+        <button class="reviews-arrow" type="button" data-review-next aria-label="Next review">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="gtrust" data-reveal>
+      <div class="gtrust__stars" role="img" aria-label="Rated 5.0 out of 5 stars">
+        <svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+      </div>
+      <p class="gtrust__score">5.0 Google Rating</p>
+      <p class="gtrust__note">Based on verified client reviews.</p>
+      <!-- TODO: point this at the public Google Business profile -->
+      <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">
+        Read all Google Reviews
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== Built different -->
+<section class="section section--dark" id="about">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <span class="label">Our thesis</span>
+      <h2>Built different.<br><span class="accent">Built better.</span></h2>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="card" data-reveal>
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-target"/></svg></span>
+        <h3>Strategy first</h3>
+        <p>
+          Every decision starts with understanding your business. We study your
+          customers, your conversion blocks, and your model before we design.
+        </p>
+      </article>
+
+      <article class="card" data-reveal>
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"/></svg></span>
+        <h3>Performance driven</h3>
+        <p>
+          Fast, scalable websites engineered for growth — spatial rhythm,
+          custom-fitted layouts, and rapid experiences that keep visitors engaged.
+        </p>
+      </article>
+
+      <article class="card" data-reveal>
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-handshake"/></svg></span>
+        <h3>Long-term partnership</h3>
+        <p>
+          We don't disappear after launch. We keep improving the site structurally
+          and stay available as your business grows.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ Created -->
+<section class="section section--dark section--continues">
+  <div class="wrap">
+    <div class="head head--center" data-reveal>
+      <span class="label">The story behind the status</span>
+      <p class="lede"><em>Every great digital experience begins with one response.</em></p>
+    </div>
+
+    <div class="flow" data-reveal>
+      <div class="flow__node">
+        <span>Client protocol</span>
+        <b>HTTP request</b>
+      </div>
+      <span class="flow__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg></span>
+      <div class="flow__node flow__node--code">
+        <span>Server response</span>
+        <b>201</b>
+      </div>
+      <span class="flow__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-arrow-right"/></svg></span>
+      <div class="flow__node flow__node--end">
+        <span>Final status</span>
+        <b>Created.</b>
+      </div>
+    </div>
+
+    <div class="prose" data-reveal>
+      <p>
+        In the technical blueprint of the internet, status code 201 represents a
+        succeeded action: <em>Created.</em> It is the server declaring that a
+        brand-new, valuable and permanent resource now exists.
+      </p>
+      <p>
+        We chose the name because every website we build is a succeeded act of
+        creation. We don't stretch templates — we write your site's architecture
+        from first principles so it reflects your absolute best.
+      </p>
+      <strong>Created to build trust. Created to drive growth. Created to last.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== Services -->
+<section class="section section--alt" id="services">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <span class="label">Our services</span>
+      <h2>What we create.</h2>
+      <p class="lede">
+        We don't sell websites. We create custom digital interfaces structured to
+        grow your business, establish trust, and convert attention.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <article class="card service" data-reveal>
+        <span class="service__no">01</span>
+        <h3>Website design</h3>
+        <p>
+          Websites your customers love using — beautiful, high-converting layouts
+          that win trust and turn attention into real opportunity.
+        </p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Layouts that turn visitors into leads</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>High-fidelity clickable designs</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Distinctive premium branding</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Micro-interactions that guide action</li>
+        </ul>
+        <button class="service__cta" data-quote data-service="Website Design">
+          Select &amp; customize
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+      </article>
+
+      <article class="card service" data-reveal>
+        <span class="service__no">02</span>
+        <h3>Corporate websites</h3>
+        <p>
+          Digital headquarters engineered to showcase leadership, build
+          stakeholder trust, and capture high-value leads.
+        </p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Authoritative brand experience</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Intuitive navigation architecture</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Secure lead capture</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>CRM &amp; sales integration</li>
+        </ul>
+        <button class="service__cta" data-quote data-service="Corporate Websites">
+          Select &amp; customize
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+      </article>
+
+      <article class="card service" data-reveal>
+        <span class="service__no">03</span>
+        <h3>NGO &amp; non-profit sites</h3>
+        <p>
+          Immersive portals that inspire action, connect with donors emotionally,
+          and streamline contributions.
+        </p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Secure global donation systems</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Impact and metric dashboards</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Donor storytelling layouts</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Resource and advocacy hubs</li>
+        </ul>
+        <button class="service__cta" data-quote data-service="NGO Websites">
+          Select &amp; customize
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+      </article>
+
+      <article class="card service" data-reveal>
+        <span class="service__no">04</span>
+        <h3>E-commerce stores</h3>
+        <p>
+          Frictionless shopping built to convert — checkout flows that remove
+          hesitation and lift average order value.
+        </p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Ultra-fast one-click checkout</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Engaging product catalogues</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Dynamic recommendations</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Cart-abandonment reduction</li>
+        </ul>
+        <button class="service__cta" data-quote data-service="E-commerce Stores">
+          Select &amp; customize
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+      </article>
+
+      <article class="card service" data-reveal>
+        <span class="service__no">05</span>
+        <h3>Web applications</h3>
+        <p>
+          Lightning-fast SaaS products, customer portals, and internal dashboards
+          that scale effortlessly.
+        </p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>High-speed client-side performance</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Secure role-based authentication</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Interactive analytics tracking</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Custom API &amp; database integration</li>
+        </ul>
+        <button class="service__cta" data-quote data-service="Web Applications">
+          Select &amp; customize
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+      </article>
+
+      <article class="card service" data-reveal>
+        <span class="service__no">06</span>
+        <h3>Growth support</h3>
+        <p>
+          Continuous performance and design audits that keep your website working
+          as hard as it did on launch day.
+        </p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Proactive security &amp; uptime watch</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Ongoing speed tuning</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Regular content &amp; design updates</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Priority direct developer access</li>
+        </ul>
+        <button class="service__cta" data-quote data-service="Growth Support">
+          Select &amp; customize
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ Process -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <span class="label">Our methodology</span>
+      <h2>How we build.</h2>
+      <p class="lede">
+        A step-by-step methodology engineered to deliver high-conversion,
+        resilient digital experiences on time.
+      </p>
+    </div>
+
+    <div class="steps">
+      <article class="step step--done" data-reveal>
+        <span class="step__no">Step 01</span>
+        <h3>Discover</h3>
+        <span class="step__kicker">Understand your business</span>
+        <p>
+          We immerse ourselves in your goals, customer psychology and competitive
+          field to find the leverage points that make you stand out.
+        </p>
+      </article>
+
+      <article class="step step--done" data-reveal>
+        <span class="step__no">Step 02</span>
+        <h3>Strategy</h3>
+        <span class="step__kicker">Define opportunities</span>
+        <p>
+          We build an architectural blueprint mapping conversion tracks,
+          information architecture, and the business outcomes that matter.
+        </p>
+      </article>
+
+      <article class="step step--done" data-reveal>
+        <span class="step__no">Step 03</span>
+        <h3>Design</h3>
+        <span class="step__kicker">Craft meaningful experiences</span>
+        <p>
+          We handcraft high-fidelity layouts from scratch, iterating with you on
+          typography, spacing and layout rhythm.
+        </p>
+      </article>
+
+      <article class="step step--done" data-reveal>
+        <span class="step__no">Step 04</span>
+        <h3>Develop</h3>
+        <span class="step__kicker">Engineer exceptional performance</span>
+        <p>
+          Our engineers translate designs into clean, fast, secure code —
+          prioritizing load speed and flawless responsiveness.
+        </p>
+      </article>
+
+      <article class="step step--done" data-reveal>
+        <span class="step__no">Step 05</span>
+        <h3>Launch</h3>
+        <span class="step__kicker">Deliver with confidence</span>
+        <p>
+          Rigorous quality checks and audit configurations before we push live,
+          so the launch is seamless.
+        </p>
+      </article>
+
+      <article class="step step--done" data-reveal>
+        <span class="step__no">Step 06</span>
+        <h3>Grow</h3>
+        <span class="step__kicker">Support continuous improvement</span>
+        <p>
+          We monitor conversion analytics and run iterative refinements to keep
+          optimizing rates and maximize growth.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ FAQ -->
+<section class="section section--alt" id="faq">
+  <div class="wrap">
+    <div class="head head--center" data-reveal>
+      <span class="label">FAQ</span>
+      <h2>Frequently asked questions.</h2>
+      <p class="lede">
+        Everything you need to know before starting your project with 201 Web
+        Services.
+      </p>
+    </div>
+
+    <div class="faq" data-faq data-reveal>
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" aria-expanded="false">
+            <span>Why don't you use pre-made templates or themes?</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a"><div>
+          <p>
+            Because a template is a decision someone else made, for a business
+            that isn't yours. We start from your goals, your audience and the way
+            you actually sell &#8212; then design and write the site around that.
+          </p>
+          <p>
+            The practical difference is real. A theme ships every feature its
+            author could imagine, and your visitors download all of it; we ship
+            only what your site needs, which is why our builds load quickly and
+            hold their ranking. Nothing is fighting a framework we didn't choose,
+            so a new section, language or integration is a change we make rather
+            than a limitation we work around. And no one else will arrive at your
+            site feeling like they've already seen it.
+          </p>
+        </div></div>
+      </div>
+
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" aria-expanded="false">
+            <span>What does working with 201 Web Services look like?</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a"><div>
+          <p>
+            Five phases, each one signed off before the next begins &#8212; so you
+            always know where the project stands.
+          </p>
+          <dl class="faq__phases">
+            <div>
+              <dt>Discovery</dt>
+              <dd>We learn your business, your customers and what the site has to achieve.</dd>
+            </div>
+            <div>
+              <dt>Strategy</dt>
+              <dd>We agree the structure, the messaging and how success will be measured.</dd>
+            </div>
+            <div>
+              <dt>Design</dt>
+              <dd>You see real layouts with real content, not placeholder text, and shape them with us.</dd>
+            </div>
+            <div>
+              <dt>Development</dt>
+              <dd>We write the site by hand and test it across devices, speeds and screen readers.</dd>
+            </div>
+            <div>
+              <dt>Launch</dt>
+              <dd>We deploy, monitor the first days closely and hand over everything you need.</dd>
+            </div>
+          </dl>
+          <p>
+            You're involved the whole way through &#8212; reviewing at each stage,
+            with one person to talk to rather than a ticket queue.
+          </p>
+        </div></div>
+      </div>
+
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" aria-expanded="false">
+            <span>How long does a typical project take?</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a"><div>
+          <p>
+            It depends on complexity, and on how ready your content is. As a
+            realistic guide:
+          </p>
+          <dl class="faq__phases">
+            <div>
+              <dt>Landing pages</dt>
+              <dd>1&#8211;2 weeks</dd>
+            </div>
+            <div>
+              <dt>Business websites</dt>
+              <dd>3&#8211;6 weeks</dd>
+            </div>
+            <div>
+              <dt>Custom platforms</dt>
+              <dd>6&#8211;12 weeks</dd>
+            </div>
+          </dl>
+          <p>
+            We'll give you a firm schedule once we understand the scope, and we'd
+            rather hold a date than hit it with work we're not proud of. A site
+            lives for years; a fortnight saved at the end is rarely worth what it
+            costs.
+          </p>
+        </div></div>
+      </div>
+
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" aria-expanded="false">
+            <span>How is project pricing determined?</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a"><div>
+          <p>
+            We don't publish fixed packages, because we've never met two projects
+            with the same requirements. Every proposal is priced on what your
+            build actually involves:
+          </p>
+          <ul class="faq__list">
+            <li>The scope of the project and what it needs to do</li>
+            <li>The features and functionality behind it</li>
+            <li>How many pages and templates are required</li>
+            <li>Integrations with payments, CRMs or other systems</li>
+            <li>The timeline you're working to</li>
+            <li>Overall technical complexity</li>
+          </ul>
+          <p>
+            Tell us about your project and we'll come back with a written
+            proposal &#8212; recommendations, timeline and investment, with no
+            obligation attached.
+          </p>
+        </div></div>
+      </div>
+
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" aria-expanded="false">
+            <span>What happens after my website goes live?</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a"><div>
+          <p>
+            Launch is the start of the relationship, not the end of the job.
+          </p>
+          <ul class="faq__list">
+            <li>A walkthrough so your team can edit and publish confidently</li>
+            <li>Ongoing website management if you'd rather we handle it</li>
+            <li>Maintenance plans covering updates, backups and security</li>
+            <li>Performance and uptime monitoring after go-live</li>
+            <li>Future improvements as your business changes</li>
+          </ul>
+          <p>
+            Most clients stay with us well past launch &#8212; a site that keeps
+            being improved is worth considerably more than one that was merely
+            finished.
+          </p>
+        </div></div>
+      </div>
+
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" aria-expanded="false">
+            <span>What is the story behind the name 201?</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a"><div>
+          <p>
+            <b class="faq__code">201 Created</b> is the status code a server
+            returns when a request has succeeded and something new exists because
+            of it. Not found, not copied &#8212; created.
+          </p>
+          <p>
+            That's the whole philosophy in three characters. Every project we
+            deliver represents something intentionally designed, carefully
+            engineered and successfully brought into existence. It's why we write
+            from first principles and never stretch a template: a template
+            returns 200. We're only interested in 201.
+          </p>
+        </div></div>
+      </div>
+
+      <div class="faq__item">
+        <h3>
+          <button class="faq__q" aria-expanded="false">
+            <span>Do you work with clients outside Nigeria?</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a"><div>
+          <p>
+            Yes. We're based in Lagos and we work with businesses, startups, NGOs
+            and institutions both across Nigeria and internationally.
+          </p>
+          <p>
+            The process is fully remote and built for it: clear written updates,
+            scheduled calls that respect your working hours, and review stages you
+            can respond to in your own time. Distance has never been the thing
+            that decides whether a project goes well.
+          </p>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="faq-cta" data-reveal>
+      <h3>Still have questions?</h3>
+      <p>
+        Not sure where to start? Send us a message on WhatsApp and we'll be
+        happy to answer your questions, discuss your project, or help you choose
+        the right solution.
+      </p>
+      <a class="btn btn--primary"
+         href="https://wa.me/2347050528704?text=Hi%20201%20Web%20Services,%20I%20have%20a%20few%20questions%20about%20my%20project%20and%20would%20love%20to%20chat."
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Chat with 201 Web Services on WhatsApp (opens in a new tab)">
+        Chat on WhatsApp
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== Final CTA -->
+<section class="section section--dark cta">
+  <div class="wrap">
+    <div class="head head--center" data-reveal>
+      <span class="label">Get started today</span>
+      <h2>Ready to build something exceptional?</h2>
+      <p class="lede">
+        Let's create a website your customers trust, remember and enjoy using.
+        Partner with engineers who understand conversion.
+      </p>
+    </div>
+
+    <div class="btn-row" data-reveal>
+      <button class="btn btn--accent btn--lg" data-quote>
+        Start your project
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </button>
+      <a class="btn btn--ghost-dark btn--lg" href="#services">Explore services</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================= Footer -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="#top" aria-label="201 Web Services — home">
+        <img class="brand__logo" src="assets/logo-mark.png" alt=""
+             width="123" height="38" decoding="async">
+      </a>
+      <p>
+        Handcrafting exceptional, conversion-focused websites from first
+        principles — for brands, NGOs, startups and enterprises.
+      </p>
+      <ul class="footer-contact">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:hello@201webservices.com">hello@201webservices.com</a></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+2348123456789">+234 812 345 6789</a></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Lekki Phase 1, Lagos, Nigeria</li>
+      </ul>
+    </div>
+
+    <nav aria-label="Company">
+      <h3 class="footer__head">Company</h3>
+      <ul class="footer-links">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="projects.html">Portfolio</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#process">Our process</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Services">
+      <h3 class="footer__head">Services</h3>
+      <ul class="footer-links">
+        <li><a href="#services">Website design</a></li>
+        <li><a href="#services">Corporate websites</a></li>
+        <li><a href="#services">NGO &amp; non-profit</a></li>
+        <li><a href="#services">E-commerce stores</a></li>
+        <li><a href="#services">Web applications</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <h3 class="footer__head">Start a project</h3>
+      <p class="footer__cta-copy">
+        Have an upcoming website launch or design audit? Let's talk about what
+        you're building.
+      </p>
+      <button class="btn btn--accent footer__cta-btn" data-quote>Start your project</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> 201 Web Services. All rights reserved.</span>
+      <nav aria-label="Legal">
+        <a href="#">Blog</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================================================= Quote dialog -->
+<dialog class="dialog" id="quote" aria-labelledby="quote-title">
+  <div class="dialog__head">
+    <div>
+      <h3 id="quote-title">Let's create something people remember.</h3>
+      <p>Tell us about your project and we'll prepare a tailored proposal with recommendations, timelines and estimated investment.</p>
+    </div>
+    <button class="dialog__close" data-close aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24"><use href="#i-close"/></svg>
+    </button>
+  </div>
+
+  <div class="dialog__body">
+    <form id="quote-form" novalidate>
+      <fieldset>
+        <legend>What are you trying to build?</legend>
+        <div class="chips" data-chipgroup="build">
+          <button type="button" class="chip" aria-pressed="true">Website design</button>
+          <button type="button" class="chip" aria-pressed="false">Corporate websites</button>
+          <button type="button" class="chip" aria-pressed="false">NGO websites</button>
+          <button type="button" class="chip" aria-pressed="false">E-commerce stores</button>
+          <button type="button" class="chip" aria-pressed="false">Web applications</button>
+          <button type="button" class="chip" aria-pressed="false">Growth support</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Project investment</legend>
+        <p class="fieldset__help" id="budget-help">Choose the investment level that best aligns with your project goals. This helps us recommend the most suitable solution.</p>
+        <div class="tiers" data-chipgroup="budget" role="radiogroup" aria-label="Project investment" aria-describedby="budget-help">
+          <label class="tier">
+            <input type="radio" name="budget" value="Starter &#183; &#8358;400k &#8211; &#8358;750k">
+            <span class="tier__name">Starter</span>
+            <span class="tier__range">&#8358;400k &#8211; &#8358;750k</span>
+            <svg class="tier__check" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>
+          </label>
+          <label class="tier">
+            <input type="radio" name="budget" value="Growth &#183; &#8358;750k &#8211; &#8358;1.5M">
+            <span class="tier__name">Growth</span>
+            <span class="tier__range">&#8358;750k &#8211; &#8358;1.5M</span>
+            <svg class="tier__check" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>
+          </label>
+          <label class="tier">
+            <input type="radio" name="budget" value="Professional &#183; &#8358;1.5M &#8211; &#8358;3M" checked>
+            <span class="tier__name">Professional</span>
+            <span class="tier__range">&#8358;1.5M &#8211; &#8358;3M</span>
+            <svg class="tier__check" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>
+          </label>
+          <label class="tier">
+            <input type="radio" name="budget" value="Enterprise &#183; &#8358;3M &#8211; &#8358;7M">
+            <span class="tier__name">Enterprise</span>
+            <span class="tier__range">&#8358;3M &#8211; &#8358;7M</span>
+            <svg class="tier__check" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>
+          </label>
+          <label class="tier">
+            <input type="radio" name="budget" value="Strategic partner &#183; &#8358;7M+">
+            <span class="tier__name">Strategic partner</span>
+            <span class="tier__range">&#8358;7M+</span>
+            <svg class="tier__check" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset data-required-group>
+        <legend>Project timeline</legend>
+        <div class="chips" data-chipgroup="timeline" aria-describedby="timeline-error">
+          <button type="button" class="chip" aria-pressed="false">ASAP</button>
+          <button type="button" class="chip" aria-pressed="false">Within 1 month</button>
+          <button type="button" class="chip" aria-pressed="false">1&#8211;3 months</button>
+          <button type="button" class="chip" aria-pressed="false">Just exploring</button>
+        </div>
+        <p class="fieldset__error" id="timeline-error" data-group-error hidden>Pick the timeline that fits best &#8212; even a rough one helps.</p>
+      </fieldset>
+
+      <div class="dialog__fields">
+        <label class="field"><span>Your name *</span><input name="name" type="text" required autocomplete="name"></label>
+        <label class="field"><span>Email address *</span><input name="email" type="email" required autocomplete="email"></label>
+        <label class="field"><span>Phone number</span><input name="phone" type="tel" autocomplete="tel" placeholder="+234 803 123 4567"></label>
+        <label class="field"><span>Company / organization</span><input name="company" type="text" autocomplete="organization"></label>
+        <label class="field field--wide"><span>About your project</span><textarea name="details" placeholder="Tell us about your business, what you're hoping to achieve, and what success looks like for this project."></textarea></label>
+      </div>
+
+      <button class="btn btn--primary btn--block btn--lg dialog__submit" type="submit">Start my project</button>
+
+      <ul class="assurance">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>We'll respond within one business day.</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>No obligation, and no sales pressure.</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Your information stays completely private.</li>
+      </ul>
+    </form>
+
+    <aside class="brief" aria-labelledby="brief-title">
+      <div class="brief__inner">
+        <p class="brief__title" id="brief-title">Project summary</p>
+        <dl class="brief__list">
+          <div class="brief__row">
+            <dt>Service</dt>
+            <dd data-brief="build">&#8212;</dd>
+          </div>
+          <div class="brief__row">
+            <dt>Investment</dt>
+            <dd data-brief="budget">&#8212;</dd>
+          </div>
+          <div class="brief__row">
+            <dt>Timeline</dt>
+            <dd data-brief="timeline" class="brief__pending">Not chosen yet</dd>
+          </div>
+          <div class="brief__row">
+            <dt>Status</dt>
+            <dd data-brief-status class="brief__pending">Awaiting details</dd>
+          </div>
+        </dl>
+        <p class="brief__note" data-brief-live aria-live="polite"></p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="dialog__done" role="status">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check-circle"/></svg>
+    <h3>Brief received.</h3>
+    <p>Thanks &#8212; we'll review your project and come back within one business day with recommendations, timelines and estimated investment.</p>
+    <button class="btn btn--ghost" data-close type="button">Close</button>
+  </div>
+</dialog>
+
+<!-- ====================================================== Project preview -->
+<dialog class="preview" id="preview" aria-labelledby="preview-name">
+  <div class="preview__inner">
+
+    <!-- Browser frame -->
+    <div class="browser">
+      <div class="browser__bar">
+        <span class="browser__lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="browser__url" data-domain></span>
+        <button class="browser__close" data-close type="button" aria-label="Close preview">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+
+      <div class="browser__viewport" data-viewport tabindex="0" role="region" aria-label="Scrollable website preview">
+        <img data-shot alt="" decoding="async">
+      </div>
+
+      <span class="browser__hint" data-hint>Auto-scrolling — hover or scroll to take over</span>
+    </div>
+
+    <!-- Project meta -->
+    <footer class="preview__meta">
+      <div>
+        <p class="preview__industry" data-industry></p>
+        <h3 id="preview-name" data-name></h3>
+        <p class="preview__tech" data-tech></p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--accent" data-similar target="_blank" rel="noopener noreferrer">
+          Start a similar project
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+</dialog>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
