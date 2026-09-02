@@ -727,16 +727,13 @@ p { text-wrap: pretty; }
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(60% 55% at 78% 22%, var(--depth-warm), transparent 62%),
+    radial-gradient(60% 55% at 30% 30%, var(--depth-warm), transparent 62%),
     radial-gradient(50% 45% at 8% 6%, var(--depth-cool), transparent 60%),
     linear-gradient(180deg, transparent 55%, var(--depth-floor));
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(2.5rem, 6vw, 5rem);
-  align-items: center;
+  max-width: 52rem;
 }
 
 .hero h1 { margin-top: 1.6rem; }
@@ -748,7 +745,7 @@ p { text-wrap: pretty; }
   padding-bottom: 0.06em;
 }
 
-.hero .lede { margin-top: 1.75rem; }
+.hero .lede { margin-top: 1.75rem; max-width: 60ch; }
 
 .hero .btn-row { margin-top: 2.25rem; }
 
@@ -762,251 +759,6 @@ p { text-wrap: pretty; }
 }
 
 .hero-proof svg { width: 15px; height: 15px; color: var(--mint-deep); }
-
-/* --------------------------------------------------------------------------
-   Signature brand element: the Creation Manifest.
-
-   The 201 numeral is set as a logo — oversized, tightly tracked, with the
-   status word beside it. Everything below is a manifest: what was made, from
-   what, and by which process. Neutral throughout; teal is spent on exactly
-   two things — the word "Created" and the phase currently running.
-   -------------------------------------------------------------------------- */
-
-.manifest {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: clamp(1.6rem, 3vw, 2.15rem);
-  box-shadow:
-    0 1px 2px rgba(11, 21, 32, 0.04),
-    0 14px 36px -14px rgba(11, 21, 32, 0.10);
-  transition: box-shadow 0.5s var(--ease);
-  will-change: transform;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .manifest { animation: float 10s ease-in-out infinite; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
-}
-
-.manifest:hover {
-  box-shadow:
-    0 1px 2px rgba(11, 21, 32, 0.04),
-    0 26px 54px -18px rgba(11, 21, 32, 0.16);
-}
-
-/* Shared micro-label */
-.manifest__label {
-  display: block;
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--faint);
-}
-
-/* --- Top line ------------------------------------------------------------- */
-
-.manifest__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.manifest__live {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--body);
-}
-
-.manifest__pulse {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: var(--mint-deep);
-  flex: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .manifest__pulse { animation: pulse 2.8s ease-in-out infinite; }
-}
-
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(14, 154, 114, 0.4); }
-  70%      { box-shadow: 0 0 0 5px rgba(14, 154, 114, 0); }
-}
-
-/* --- The numeral: treated as a logo, not a stat ---------------------------- */
-
-.manifest__code {
-  display: flex;
-  align-items: baseline;
-  gap: 0.7rem;
-  margin-top: 1.1rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--line);
-}
-
-.manifest__num {
-  font-family: var(--display);
-  font-size: clamp(4.2rem, 8.5vw, 5.6rem);
-  font-weight: 800;
-  line-height: 0.82;
-  letter-spacing: -0.055em;
-  color: var(--ink);
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum" 1;
-}
-
-.manifest__created {
-  font-family: var(--display);
-  font-size: var(--step-2);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--mint-deep);
-}
-
-/* --- Manifest rows: mono keys, hairline separated -------------------------- */
-
-.manifest__rows {
-  display: grid;
-  padding-block: 0.35rem;
-  border-bottom: 1px solid var(--line);
-}
-
-.manifest__rows > div {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1.25rem;
-  padding-block: 0.62rem;
-}
-
-.manifest__rows dt {
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--faint);
-  flex: none;
-}
-
-.manifest__rows dd {
-  margin: 0;
-  font-family: var(--display);
-  font-size: var(--step-sm);
-  font-weight: 600;
-  color: var(--ink);
-  text-align: right;
-  letter-spacing: -0.01em;
-}
-
-/* --- Creation pipeline ----------------------------------------------------- */
-
-.pipeline { padding-block: 1.35rem; border-bottom: 1px solid var(--line); }
-
-.pipeline__list {
-  display: grid;
-  margin-top: 1rem;
-  position: relative;
-}
-
-/* Hairline rail threading the marks together */
-.pipeline__list::before {
-  content: "";
-  position: absolute;
-  left: 4.5px;
-  top: 0.85rem;
-  bottom: 0.85rem;
-  width: 1px;
-  background: var(--line);
-}
-
-.pipe {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  padding-block: 0.42rem;
-}
-
-.pipe__mark {
-  position: relative;
-  z-index: 1;
-  width: 10px; height: 10px;
-  flex: none;
-  border-radius: 50%;
-  border: 1.5px solid var(--line);
-  background: var(--paper);
-  transition: border-color 0.4s var(--ease), background-color 0.4s var(--ease);
-}
-
-/* Completed: filled neutral */
-.pipe--done .pipe__mark {
-  border-color: var(--body);
-  background: var(--body);
-}
-
-/* Running: the second and last place teal appears */
-.pipe--active .pipe__mark {
-  border-color: var(--mint-deep);
-  background: var(--mint-deep);
-  box-shadow: 0 0 0 3px rgba(46, 230, 168, 0.18);
-}
-
-.pipe__name {
-  flex: 1;
-  font-family: var(--display);
-  font-size: var(--step-sm);
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--faint);
-  transition: color 0.4s var(--ease);
-}
-
-.pipe--done .pipe__name { color: var(--ink); }
-.pipe--active .pipe__name { color: var(--ink); }
-
-.pipe__state {
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--faint);
-}
-
-.pipe--active .pipe__state { color: var(--mint-deep); }
-
-/* --- Provenance ------------------------------------------------------------ */
-
-.manifest__foot { padding-top: 1.35rem; }
-
-.manifest__principle {
-  font-family: var(--display);
-  font-size: var(--step-sm);
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-
-.manifest__never {
-  margin-top: 0.25rem;
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--faint);
-}
 
 /* --- Trusted by ----------------------------------------------------------- */
 
@@ -2461,8 +2213,6 @@ p { text-wrap: pretty; }
    ========================================================================== */
 
 @media (max-width: 1024px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .manifest { max-width: 460px; }
   .services-grid,
   .steps { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
